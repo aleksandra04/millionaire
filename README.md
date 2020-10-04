@@ -5,7 +5,7 @@ This is **Millionaire Quiz Game** created using React and Typescript.
 Project bootstrapped with `create-react-app`.
 
 ### Demo application 
-Please visit [DEMO](http://google.com) to see how the application works.
+Please visit [DEMO](http://aleksandra04.github.io/millionaire) to see how the application works.
 
 ### Getting Started:
 
