@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c546be35e5d79db03632d114ddd85e63",
+    "revision": "34a07d1af6a455c1efdcbd03771c482a",
     "url": "/millionaire/index.html"
   },
   {
-    "revision": "57e7bb4fd95aa94438cb",
-    "url": "/millionaire/static/css/main.da7696b2.chunk.css"
+    "revision": "b78e48945ff2961d051a",
+    "url": "/millionaire/static/css/main.1d67e7fc.chunk.css"
   },
   {
     "revision": "13ff2c1a9f3e619378bb",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/millionaire/static/js/2.bf80a038.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "57e7bb4fd95aa94438cb",
-    "url": "/millionaire/static/js/main.58035c76.chunk.js"
+    "revision": "b78e48945ff2961d051a",
+    "url": "/millionaire/static/js/main.d60c462a.chunk.js"
   },
   {
     "revision": "078e70291101148e5f5b",
