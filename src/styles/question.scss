@@ -1,0 +1,235 @@
+.question {
+  background-color: #efefef;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__button{
+    background-image: url('../images/side.svg');
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 21px 0 0 0;
+    margin-right: 36px;
+    max-width: 320px;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    line-height: 21px;
+    max-width: 280px;
+    min-height: 160px;
+    margin: 98px 0 0 0;
+  }
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+  align-items: center;
+
+  &__value {
+    background-image: url('../images/Rectangle.svg');
+    height: 56px;
+    width: 288px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    margin-bottom: 8px;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    padding-left: 50px;
+    outline: none;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 17px;
+      height: 1px;
+      background-color: #D0D0D8;
+      left: calc(100% / 2 - 160px);
+      top: 27px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 17px;
+      height: 1px;
+      background-color: #D0D0D8;
+      right: calc(100% / 2 - 160px);
+      top: 27px;
+    }
+
+    &__letter {
+      font-weight: 600;
+      font-size: 14px;
+      color: #FF8B37;
+      margin-right: 8px;
+    }
+
+    &--orange {
+      background-image: url('../images/RectangleOrange.svg');
+      &::before {
+        background-color: #FF8B37;
+      }
+      &::after {
+        background-color: #FF8B37;
+      }
+    }
+    &--green {
+      background-image: url('../images/RectangleGreen.svg');
+      &::before {
+        background-color: #47D867;
+      }
+      &::after {
+        background-color: #47D867;
+      }
+    }
+    &--red {
+      background-image: url('../images/RectangleRed.svg');
+      &::before {
+        background-color: #EC6259;
+      }
+      &::after {
+        background-color: #EC6259;
+      }
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .question {
+    flex-grow: 1;
+
+    &__wrapper {
+      padding: 133px 80px 125px;
+      height: 100%;
+      max-height: 800px;
+    }
+
+    &__text {
+      margin:  0;
+      flex-grow: 1;
+    }
+
+    &__header {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1170px) {
+  .question {
+
+    &__wrapper {
+      align-items: flex-start;
+    }
+
+    &__text {
+      text-align: left;
+      max-width: 80%;
+      font-size: 32px;
+      line-height: 35px;
+    }
+  }
+  .answers {
+    padding-left: 16px;
+    height: 150px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 610px;
+
+    &__value {
+      width: 288px;
+      font-size: 20px;
+
+      &:nth-child(odd) {
+        margin-right: 32px;
+      }
+    }
+
+    &__value__letter {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: 1360px) {
+  .answers {
+    height: 176px;
+    min-width: 810px;
+
+    &__value {
+      background-image: url('../images/RectAnswerDesk.svg');
+      width: 389px;
+      height: 72px;
+
+      &:nth-child(odd) {
+        margin-right: 32px;
+      }
+
+      &::before {
+        width: 16px;
+        left: calc(100% / 2 - 210px);
+        top: 35px;
+      }
+
+      &::after {
+        width: 16px;
+        right: calc(100% / 2 - 210px);
+        top: 35px;
+      }
+      &--desk-orange {
+        background-image: url('../images/RectAnswerDeskOrangr.svg');
+        &::before {
+          background-color: #FF8B37;
+        }
+        &::after {
+          background-color: #FF8B37;
+        }
+      }
+      &--desk-green {
+        background-image: url('../images/RectAnswerDeskGreen.svg');
+        &::before {
+          background-color: #47D867;
+        }
+        &::after {
+          background-color: #47D867;
+        }
+      }
+      &--desk-red {
+        background-image: url('../images/RectAnswerDeskRed.svg');
+        &::before {
+          background-color: #EC6259;
+        }
+        &::after {
+          background-color: #EC6259;
+        }
+      }
+    }
+  }
+}

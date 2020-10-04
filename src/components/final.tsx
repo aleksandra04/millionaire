@@ -15,12 +15,14 @@ const Final = ({ result }: Props): JSX.Element => {
   }, [result]);
 
   return (
-    <main>
-      <div>Final</div>
-      <div>
-        <p>total score</p>
-        <p>{`$${result} earned`}</p>
-        <Link to="/">Try again</Link>
+    <main className="home__background">
+      <div className="home__wrapper">
+        <div className="home__logo" />
+        <div className="home__info">
+          <p className="home__info-headind">total score</p>
+          <p className="home__info-text">{`$${result && result.toLocaleString()} earned`}</p>
+          <Link to="/" className="button">Try again</Link>
+        </div>
       </div>
     </main>
   );

@@ -1,0 +1,130 @@
+.side {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #efefef;
+  transition: 0.3s;
+
+  &__header {
+    padding: 21px 0 30px;
+    margin-right: 36px;
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__button{
+    background-image: url('../images/Close.svg');
+    width: 13px;
+    height: 13px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__prices {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__price {
+    background-image: url('../images/RectangleCostMobile.svg');
+    width: 100%;
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    margin-bottom: 8px;
+    position: relative;
+    line-height: 32px;
+    font-weight: 400;
+    font-size: 14px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 41px;
+      height: 1px;
+      background-color: #D0D0D8;
+      left: calc(100% / 2 - 160px);
+      top: 16px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 41px;
+      height: 1px;
+      background-color: #D0D0D8;
+      right: calc(100% / 2 - 160px);
+      top: 16px;
+    }
+
+    &--gray {
+      color: #D0D0D8;
+    }
+
+    &--orange {
+      background-image: url('../images/RectangleCostMobOrange.svg');
+      background-repeat: no-repeat;
+      color: #FF8B37;
+
+      &::before {
+        background-color: #FF8B37;
+      }
+
+      &::after {
+        background-color: #FF8B37;
+      }
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .side {
+    background-color: white;
+    max-width: 376px;
+    height: auto;
+    justify-content: center;
+
+    &__header {
+      display: none;
+    }
+
+    &__prices {
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__price {
+      background-image: url('../images/RectangleCostDesktop.svg');
+      height: 40px;
+      max-width: 240px;
+      margin-bottom: 8px;
+      line-height: 40px;
+      font-size: 20px;
+
+      &--desktop {
+        background-image: url('../images/RectangleCostOrangeDesktop.svg');
+      }
+
+      &::before {
+        width: 68px;
+        left: calc(100% / 2 - 188px);
+        top: 19px;
+      }
+      &::after {
+        width: 68px;
+        right: calc(100% / 2 - 188px);
+        top: 19px;
+      }
+    }
+  }
+}
