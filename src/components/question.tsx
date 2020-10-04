@@ -101,7 +101,7 @@ const Question = ({
                     answer.correct, choosenQuestionIndex)]}
               >
                 <span className="answers__value__letter">{alphabet[i]}</span>
-                {answer.value}
+                <span>{answer.value}</span>
               </button>
             );
           })}

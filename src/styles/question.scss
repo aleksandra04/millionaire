@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100%;
   }
 
   &__button{
@@ -62,7 +63,13 @@
     text-align: left;
     padding-left: 50px;
     outline: none;
+    display: flex;
+    align-items: center;
     cursor: pointer;
+
+    &:disabled {
+      color: black;
+    }
 
     &::before {
       content: '';
@@ -82,6 +89,10 @@
       background-color: #D0D0D8;
       right: calc(100% / 2 - 160px);
       top: 27px;
+    }
+
+    span {
+      max-width: 200px;
     }
 
     &__letter {
@@ -121,13 +132,16 @@
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .question {
     flex-grow: 1;
-
+    box-sizing: border-box;
+    
     &__wrapper {
       padding: 133px 80px 125px;
+      box-sizing: border-box;
       height: 100%;
+      width: 100%;
       max-height: 800px;
     }
 
@@ -151,7 +165,7 @@
 
     &__text {
       text-align: left;
-      max-width: 80%;
+      max-width: 900px;
       font-size: 32px;
       line-height: 35px;
     }

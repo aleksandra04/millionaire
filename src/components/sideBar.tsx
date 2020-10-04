@@ -33,7 +33,7 @@ const SideBar = ({
 
           if (index < choosenQuestionIndex) { classes.push('side__price--gray'); }
           if (index === choosenQuestionIndex) { classes.push('side__price--orange'); }
-          if (index === choosenQuestionIndex && screenWidth && screenWidth >= 700) { classes.push('side__price--desktop'); }
+          if (index === choosenQuestionIndex && screenWidth && screenWidth >= 800) { classes.push('side__price--desktop'); }
           return (
             <p key={question.cost} className={classes.join(' ')}>
               {`$${question.cost.toLocaleString()}`}
