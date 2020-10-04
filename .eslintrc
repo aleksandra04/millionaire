@@ -18,6 +18,17 @@
         }
     },
     "rules": {
+        "react-hooks/exhaustive-deps": [
+            "off"
+        ],
+        "indent": "off",
+        "@typescript-eslint/indent": [
+            "error",
+            2
+        ],
+        "operator-linebreak": [
+            "off"
+        ],
         "object-curly-spacing": [
             "warn",
             "always"
@@ -34,12 +45,6 @@
             {
                 "vars": "all",
                 "args": "none"
-            }
-        ],
-        "@typescript-eslint/no-explicit-any": [
-            "error",
-            {
-                "ignoreRestArgs": true
             }
         ],
         "max-len": [
